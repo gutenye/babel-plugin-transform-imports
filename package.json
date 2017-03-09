@@ -1,6 +1,6 @@
 {
   "name": "@gutenye/babel-plugin-transform-imports",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "description": "Transforms member style imports (import {x} from 'y') into default style imports (import x from 'y/lib/x')",
   "keywords": [
     "babel",
