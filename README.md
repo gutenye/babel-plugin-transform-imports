@@ -2,6 +2,24 @@
 
 forked from https://bitbucket.org/amctheatres/babel-transform-imports
 
+- add replace option
+
+```
+{
+  'react-icons/lib/md': {
+    transform: 'react-icons/lib/md/${member}',
+    replace: ['^Md', ''],
+    kebabCase: true,
+  }
+}
+```
+
+Install
+
+```
+npm install @gutenye/babel-transform-imports
+```
+
 Transforms member style imports:
 
 ```javascript
