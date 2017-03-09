@@ -58,6 +58,8 @@ module.exports = function() {
                         if (opts.replace)
                           importName = importName.replace(opts.replace[0], opts.replace[1]);
                         if (opts.kebabCase) importName = kebab(importName);
+                        if (opts.replace)
+                          importName = importName.replace(new RegExp(opts.replace[0]), opts.replace[1]);
 
                         var replace = opts.transform.replace(/\$\{\s?member\s?\}/ig, importName);
 
