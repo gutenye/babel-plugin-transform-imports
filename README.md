@@ -1,5 +1,7 @@
 # babel-plugin-transform-imports
 
+forked from https://bitbucket.org/amctheatres/babel-transform-imports
+
 Transforms member style imports:
 
 ```javascript
