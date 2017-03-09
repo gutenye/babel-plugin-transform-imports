@@ -56,8 +56,11 @@ module.exports = function() {
 
                         var importName = memberImport.imported.name;
                         if (opts.kebabCase) importName = kebab(importName);
+                        if (opts.replace)
+                          importName = importName.replace(new RegExp(opts.replace[0]), opts.replace[1]);
 
                         var replace = opts.transform.replace(/\$\{\s?member\s?\}/ig, importName);
+
 
                         transforms.push(types.importDeclaration(
                             [types.importDefaultSpecifier(types.identifier(memberImport.local.name))],
