@@ -6,12 +6,17 @@ forked from https://bitbucket.org/amctheatres/babel-transform-imports
 
 ```
 {
-  'react-icons/lib/md': {
-    transform: 'react-icons/lib/md/${member}',
-    replace: ['^Md', ''],
+  'react-icons': {
+    transform: 'react-icons/lib/${member}',
+    replace: ['^(..)-', '$1/'],
     kebabCase: true,
   }
 }
+
+import { MdCheck, FaCheck } from 'react-icons'
+->
+import MdCheck from 'react-icons/lib/md/check'
+import FaCheck from 'react-icons/lib/fa/check'
 ```
 
 Install
