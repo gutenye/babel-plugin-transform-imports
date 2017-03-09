@@ -55,9 +55,12 @@ module.exports = function() {
                         //      import gird from 'react-bootstrap/lib/Grid';
 
                         var importName = memberImport.imported.name;
+                        if (opts.replace)
+                          importName = importName.replace(opts.replace[0], opts.replace[1]);
                         if (opts.kebabCase) importName = kebab(importName);
 
                         var replace = opts.transform.replace(/\$\{\s?member\s?\}/ig, importName);
+
 
                         transforms.push(types.importDeclaration(
                             [types.importDefaultSpecifier(types.identifier(memberImport.local.name))],
